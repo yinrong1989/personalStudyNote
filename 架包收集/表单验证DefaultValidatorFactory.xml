@@ -1,0 +1,10 @@
+<!-- 表单验证 -->
+    <bean id="validatorFactory" class="org.springmodules.validation.commons.DefaultValidatorFactory">
+        <property name="validationConfigLocations">
+            <list>
+                <value>classpath:META-INF/validator/validator-rules.xml</value>
+                <value>classpath:META-INF/validator/validator-member.xml</value>
+                <value>classpath:META-INF/validator/validator-custom.xml</value>
+            </list>
+        </property>
+    </bean>

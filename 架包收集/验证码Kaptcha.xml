@@ -1,0 +1,23 @@
+ <bean id="kaptchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.session.key">KAPTCHA</prop>
+                        <prop key="kaptcha.border">no</prop>
+                        <prop key="kaptcha.image.width">100</prop>
+                        <prop key="kaptcha.image.height">28</prop>
+                        <prop key="kaptcha.textproducer.char.string">0123456789</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                        <prop key="kaptcha.textproducer.font.size">28</prop>
+                        <prop key="kaptcha.background.clear.from">247,247,247</prop>
+                        <prop key="kaptcha.background.clear.to">247,247,247</prop>
+                        <prop key="kaptcha.textproducer.font.names">Arial,Courier</prop>
+                        <prop key="kaptcha.textproducer.font.color">48,212,164</prop>
+                        <!-- <prop key="kaptcha.word.impl">com.netfinworks.vfsso.ucenter.util.KJTGimpyEngine</prop> -->
+                        <prop key="kaptcha.noise.impl">com.google.code.kaptcha.impl.NoNoise</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
